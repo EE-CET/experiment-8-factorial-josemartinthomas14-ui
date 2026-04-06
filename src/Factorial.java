@@ -1,11 +1,21 @@
+import java.util.Scanner;
+
 public class Factorial {
 
-    // TODO: Create a method 'public static long factorial(int n)'
-    // It should return the factorial of n.
+    public static long factorial(int n) {
+        long fact = 1;
+        for (int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        return fact;
+    }
 
-    
-        // TODO: Read input n
-        // TODO: Call factorial(n)
-        // TODO: Print the result
-    
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.hasNextInt()) {
+            int n = scanner.nextInt();
+            System.out.println(factorial(n));
+        }
+        scanner.close();
+    }
 }
